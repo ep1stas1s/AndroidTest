@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!-- USER_IMAGE & USER_ID -->
+    <RelativeLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_userImage"
+            android:background="#333"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_userId"
+            android:text="wldbs2580"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/iv_userImage"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <!--POST-->
+    <ImageView
+        android:id="@+id/iv_postImage"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/sample"
+        />
+
+    <!--TEARS-->
+    <RelativeLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/cb_tear"
+            android:button="@drawable/tear_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+        <TextView
+            android:id="@+id/tv_tearCount"
+            android:layout_toRightOf="@id/cb_tear"
+            android:layout_centerVertical="true"
+            android:text="301"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <!--LINE-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#efefef"
+        />
+
+    <!--CONTENT-->
+    <LinearLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="wldbs2580"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_postContent"
+            android:layout_marginLeft="16dp"
+            android:text="재수 오지게 없구요 (^오^)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

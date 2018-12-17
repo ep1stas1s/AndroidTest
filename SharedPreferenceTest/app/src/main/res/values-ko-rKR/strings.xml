@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SharedPreferenceTest</string>
+    <string name="hello_user">오늘도 감사합니다 호갱님^^</string>
+    <string name="hello_first">만나서 반갑습니다^^</string>
+</resources>

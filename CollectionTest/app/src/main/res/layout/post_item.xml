@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:background="#424242"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <RelativeLayout
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--<ImageView
+            android:background="#d50000"
+            android:id="@+id/iv_like"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />-->
+        <CheckBox
+            android:id="@+id/cb_like"
+            android:button="@drawable/like_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_likeCount"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/cb_like"
+            android:layout_centerVertical="true"
+            android:text="1234"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:background="#222"
+            android:id="@+id/iv_share"
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+    </RelativeLayout>
+
+    <View
+        android:background="#efefef"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:padding="8dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_userName"
+            android:text="wldbs2580"
+            android:textColor="#6200ea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_postText"
+            android:text="WOW!!"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
