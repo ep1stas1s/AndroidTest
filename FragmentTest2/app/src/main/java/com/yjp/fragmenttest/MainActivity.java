@@ -1,0 +1,50 @@
+package com.yjp.fragmenttest;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+
+    MainFragment fragment1;
+    MenuFragment fragment2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        fragment1 = new MainFragment();
+        fragment2 = new MenuFragment();
+
+        // Fragment 1
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 여러 개의 명령어를 한번에 쓰기 때문에 transaction 을 사용
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment1).commit();
+            }
+        });
+
+
+        // Fragment 2
+        Button button2 = findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment2).commit();
+            }
+        });
+    }
+
+    public void onFragmentChange(int index){
+        if (index == 0){
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment1).commit();
+        }else if(index == 1){
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment2).commit();
+        }
+    }
+}
